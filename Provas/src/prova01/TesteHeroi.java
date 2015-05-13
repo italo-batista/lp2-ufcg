@@ -25,31 +25,31 @@ public class TesteHeroi {
 		//Mario causa:
 		//   dano total de: 30
 		//   cura total de: 20
-		Assert.assertTrue(mario.criaItem("Pocao Cogumelo", 10.0, 20, "Pocao")); 
-		Assert.assertTrue(mario.criaItem("Sapato", 30.0, 30, "Arma"));
-		Assert.assertFalse(mario.criaItem("Espada", 50.0, 15, "Arma"));
+		Assert.assertTrue(mario.criaPocao("Pocao Cogumelo", 10.0, 20)); 
+		Assert.assertTrue(mario.criaArma("Sapato", 30.0, 30));
+		Assert.assertFalse(mario.criaPocao("Espada", 50.0, 15));
 		
 		//Kratos causa:
 		//   dano total de: 90
 		//   cura total de: 25
-		Assert.assertTrue(kratos.criaItem("Corrente", 40.0, 50, "Arma"));
-		Assert.assertTrue(kratos.criaItem("Espada", 50.0, 40, "Arma"));
-		Assert.assertTrue(kratos.criaItem("Pocao dos Deuses", 10.0, 25, "Pocao"));
+		Assert.assertTrue(kratos.criaArma("Corrente", 40.0, 50));
+		Assert.assertTrue(kratos.criaArma("Espada", 50.0, 40));
+		Assert.assertTrue(kratos.criaPocao("Pocao dos Deuses", 10.0, 25));
 		
 		//Sylvanas causa: 
 		//   dano total de: 30 + 5 = 35
 		//   cura total de: 100
-		Assert.assertTrue(sylvanas.criaItem("Arco e Flecha", 30.0, 40, "Arma"));
-		Assert.assertTrue(sylvanas.criaItem("Pocao Venenosa", 5.0, 10, "Arma"));
-		Assert.assertTrue(sylvanas.criaItem("Pocao Milagrosa", 5.0, 100, "Pocao"));
+		Assert.assertTrue(sylvanas.criaArma("Arco e Flecha", 30.0, 40));
+		Assert.assertTrue(sylvanas.criaArma("Pocao Venenosa", 5.0, 10));
+		Assert.assertTrue(sylvanas.criaPocao("Pocao Milagrosa", 5.0, 100));
 		
 		//Samus causa:
 		//   dano total: 50 + 30 = 80
 		//   cura total: 40
-		Assert.assertTrue(samusAran.criaItem("Canhao de Plasma", 50.0, 30, "Arma"));
-		Assert.assertFalse(samusAran.criaItem("Missil Nuclear", 100.0, 900, "Arma"));
-		Assert.assertTrue(samusAran.criaItem("Missil de Gelo", 30.0, 50, "Arma"));
-		Assert.assertTrue(samusAran.criaItem("Vacina", 10.0, 40, "Pocao"));
+		Assert.assertTrue(samusAran.criaArma("Canhao de Plasma", 50.0, 30));
+		Assert.assertFalse(samusAran.criaArma("Missil Nuclear", 100.0, 900));
+		Assert.assertTrue(samusAran.criaArma("Missil de Gelo", 30.0, 50));
+		Assert.assertTrue(samusAran.criaPocao("Vacina", 10.0, 40));
 
 	}
 	

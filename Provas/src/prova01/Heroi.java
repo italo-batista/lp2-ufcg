@@ -13,36 +13,35 @@ public class Heroi {
 		this.nome = nome;
 		this.mochila = new Mochila(pesoMaxMochila);
 	}
-
 	
 	public int getHP() {
 		return HP;
 	}
 
-	
 	public void setHP(int HP) {
 		this.HP = HP;
 	}
 
-	
 	public String getNome() {
 		return nome;
 	}
-
 	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
 	
 	public Mochila getMochila() {
 		return mochila;
 	}
-
 	
-	public boolean criaItem(String nomeItem, double pesoItem, int efeitoItem, String tipoItem) {
-		Item item = new Item(nomeItem, pesoItem, efeitoItem, tipoItem); 
-		return mochila.addItem(item);
+	public boolean criaArma(String nomeItem, double pesoItem, int efeitoItem) {
+		Arma arma = new Arma(nomeItem, pesoItem, efeitoItem); 
+		return mochila.addItem(arma);
+	}
+	
+	public boolean criaPocao(String nomeItem, double pesoItem, int efeitoItem) {
+		Pocao pocao = new Pocao(nomeItem, pesoItem, efeitoItem); 
+		return mochila.addItem(pocao);
 	}
 	
 	public String ataca (Heroi outroHeroi) {

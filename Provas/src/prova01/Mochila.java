@@ -25,8 +25,9 @@ public class Mochila {
 			
 			Item item = iterator.next();
 			
-			if (item.getTipo().equals("Arma")) {
-				totalDano = totalDano + item.getEfeito();
+			if (item instanceof Arma) {
+				Arma arma = (Arma) item;
+				totalDano = totalDano + arma.getEfeito();
 			}
 		}
 		
@@ -42,8 +43,9 @@ public class Mochila {
 			
 			Item item = iterator.next();
 			
-			if (item.getTipo().equals("Pocao")) {
-				totalCura = totalCura + item.getEfeito();
+			if (item instanceof Pocao) {
+				Pocao pocao = (Pocao) item;
+				totalCura = totalCura + pocao.getEfeito();
 			}
 		}
 
