@@ -1,0 +1,11 @@
+package sp2fy;
+
+public class Album {
+
+	List<Musica> album;
+	
+	public Album (){
+		this.album = new ArrayList<Album>();
+	}
+	
+}
