@@ -1,0 +1,17 @@
+
+public class Heroi {
+
+	public final static double MAX_PONTOS = 100; 
+	
+	private double vida;
+	private String nome;
+	private Mochila mochila;
+	
+	public Heroi (String nome, Mochila mochila) {
+		this.vida = MAX_PONTOS;
+		this.nome = nome;
+		this.mochila = mochila;
+	}
+	
+	
+}

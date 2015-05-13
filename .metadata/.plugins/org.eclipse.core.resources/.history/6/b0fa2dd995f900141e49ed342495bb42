@@ -1,0 +1,51 @@
+import java.util.Iterator;
+import java.util.List;
+import java.util.ArrayList;
+
+public class Mochila {
+
+	List<Item> itensNaMochila;
+	int pesoMax;
+
+	public Mochila(int pesoMax) {
+		this.itensNaMochila = new ArrayList<Item>();
+		this.pesoMax = pesoMax;
+	}
+
+	public int getTotalDano() {
+
+		int totalDano = 0;
+
+		Iterator<Item> iterator = this.itensNaMochila.iterator();
+		while (iterator.hasNext()) {
+			
+			Item item = iterator.next();
+			
+			if (item.getTipo().equals("Arma")) {
+				totalDano = totalDano + item.getEfeito();
+			}
+		}
+
+		return totalDano;
+	}
+
+	public int getTotalCura() {
+
+		item totalCura = 0;
+
+		Iterator<Item> iterator = this.itensNaMochila.iterator();
+		while (iterator.hasNext()) {
+			
+			Item item = iterator.next();
+			
+			if (item.getTipo().equals("Pocao")) {
+				totalCura = totalCura + item.getEfeito();
+			}
+		}
+
+		return totalCura;
+		
+	}
+
+
+}
