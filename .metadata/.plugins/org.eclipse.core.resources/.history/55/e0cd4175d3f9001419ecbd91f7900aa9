@@ -4,8 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;
 
-public class TestAlbum {
+public class TestAlbumTest {
     
+	
 	Album cenaMuda;
 	Album medulla;
 	
@@ -24,22 +25,21 @@ public class TestAlbum {
 		Musica mouthsCradle = new Musica("Mouths Cradle", 5, "Indie");
 		Musica oceania = new Musica("Oceania", 4, "Indie");
 		Musica demoniaca = new Musica("Demoniaca", 3, "MPB");
-		
 	}
 	
 	
 	@Test
 	public void testCriaAlbum() {
-		
 		try {
-			System.out.println(cenaMuda.toString() + medulla.toString() + oceania.toString());
-			
 			Album cantoLivre = new Album("O Canto Livre", "Nara Leao", 1962);
 			Assert.assertEquals("O Canto Livre", cantoLivre.getTitulo());
 			Assert.assertEquals("Nara Leao", cantoLivre.getArtista());
 			Assert.assertEquals(1962, cantoLivre.getAnoLancamento());
 			
+			System.out.println(cenaMuda + medulla + oceania);
+			
 		} catch (Exception e) {
+			Assert.fail();
 		}
 		
 		try {
@@ -74,7 +74,7 @@ public class TestAlbum {
 			Assert.assertEquals(3, cenaMuda.getDuracaoTotal());	
 			
 		} catch (Exception e) {
-
+			Assert.fail();
 		}
 		
 		try {
@@ -87,6 +87,7 @@ public class TestAlbum {
 			Assert.assertEquals(medulla.getAlbum().get(2).getNome(), "Mouths Cradle");
 			
 		} catch (Exception e) {
+			Assert.fail();
 		}
 	}
 

@@ -11,7 +11,7 @@ public class Album {
 	private int anoLancamento;
 	private List<Musica> album;
 	
-	public Album (String titulo, String artista, int anoLancamento) throws Exception {
+public Album (String titulo, String artista, int anoLancamento) throws Exception {
 		
 		if (titulo.equals("") || titulo == null) {
 			throw new Exception("Nao e possivel cadastrar album sem titulo.");

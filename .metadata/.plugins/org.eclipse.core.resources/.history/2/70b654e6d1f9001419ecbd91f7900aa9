@@ -11,43 +11,18 @@ public class Album {
 	private int anoLancamento;
 	private List<Musica> album;
 	
-	public Album (String titulo, String artista, int anoLancamento) throws Exception {
-		
-		if (titulo.equals("") || titulo == null) {
-			throw new Exception("Nao e possivel cadastrar album sem titulo.");
-		} else {
-			this.titulo = titulo;
-		}
-	
-		if (artista.equals("") || artista == null) {
-			throw new Exception("Nao e possivel cadastrar album sem artista.");
-		} else {
-			this.artista = artista;
-		}
-	
-		if (anoLancamento < 0) {
-			throw new Exception("Nao e possivel cadastrar album sem artista.");
-		} else {
-			this.anoLancamento = anoLancamento;
-		}
-		
-			this.duracaoTotal = 0;
-			this.album = new ArrayList<Musica>();
+	public Album (String titulo, String artista, int anoLancamento){
+		this.titulo = titulo;
+		this.artista = artista;
+		this.duracaoTotal = 0;
+		this.anoLancamento = anoLancamento;
+		this.album = new ArrayList<Musica>();
 	}
 	
 	public void addMusica(Musica musica){
 		this.duracaoTotal = this.duracaoTotal + musica.getDuracao();
 		this.album.add(musica);
 			
-	}
-
-	public boolean removeMusica(Musica musica){
-		if (album.contains(musica)){
-			album.remove(musica);
-			return true;
-		}
-		
-		return false;
 	}
 
 	@Override

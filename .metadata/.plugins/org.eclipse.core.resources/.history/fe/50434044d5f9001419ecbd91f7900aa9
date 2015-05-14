@@ -4,8 +4,9 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;
 
-public class TestAlbum {
+public class TestAlbumTest {
     
+	
 	Album cenaMuda;
 	Album medulla;
 	
@@ -30,8 +31,8 @@ public class TestAlbum {
 	
 	@Test
 	public void testCriaAlbum() {
-		
 		try {
+			
 			System.out.println(cenaMuda.toString() + medulla.toString() + oceania.toString());
 			
 			Album cantoLivre = new Album("O Canto Livre", "Nara Leao", 1962);
@@ -40,6 +41,7 @@ public class TestAlbum {
 			Assert.assertEquals(1962, cantoLivre.getAnoLancamento());
 			
 		} catch (Exception e) {
+
 		}
 		
 		try {
