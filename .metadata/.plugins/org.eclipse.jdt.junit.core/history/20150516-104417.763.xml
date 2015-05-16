@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestAlbum" project="Labs" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="lab04.TestAlbum" time="0.0">
+    <testcase name="testAlbumInvalido" classname="lab04.TestAlbum" time="0.0"/>
+    <testcase name="testRemoveMusica" classname="lab04.TestAlbum" time="0.0"/>
+    <testcase name="testAddMusica" classname="lab04.TestAlbum" time="0.0"/>
+    <testcase name="testAlbunsIguais" classname="lab04.TestAlbum" time="0.0"/>
+  </testsuite>
+</testrun>

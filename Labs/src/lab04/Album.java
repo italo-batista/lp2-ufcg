@@ -35,19 +35,17 @@ public class Album {
 			this.album = new ArrayList<Musica>();
 	}
 	
-	public void addMusica(Musica musica){
+	public void addMusica (Musica musica) {
 		this.duracaoTotal = this.duracaoTotal + musica.getDuracao();
 		this.album.add(musica);
-			
 	}
 
-	public boolean removeMusica(Musica musica){
+	public void removeMusica(Musica musica) throws Exception {
 		if (album.contains(musica)){
 			album.remove(musica);
-			return true;
 		}
 		
-		return false;
+		throw new Exception("Essa musica ja nao estava inclusa no album.");
 	}
 
 	@Override
