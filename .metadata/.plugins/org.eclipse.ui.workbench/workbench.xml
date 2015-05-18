@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="34" version="2.0">
+<workbench progressCount="29" version="2.0">
 <workbenchAdvisor/>
 <window height="716" maximized="true" width="654" x="0" y="-28">
 <fastViewData fastViewLocation="1024"/>
@@ -42,15 +42,15 @@
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Album.java" partName="Album.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/Album.java" title="Album.java" tooltip="Labs/src/lab04/Album.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/Album.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1533" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1533" selectionTopPixel="1224"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Musica.java" partName="Musica.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/Musica.java" title="Musica.java" tooltip="Labs/src/lab04/Musica.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/Musica.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="107" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="107" selectionTopPixel="629"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Perfil.java" partName="Perfil.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/Perfil.java" title="Perfil.java" tooltip="Labs/src/lab04/Perfil.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Perfil.java" partName="Perfil.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/Perfil.java" title="Perfil.java" tooltip="Labs/src/lab04/Perfil.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/Perfil.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1138" selectionTopPixel="150"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1327" selectionTopPixel="356"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestMusica.java" partName="TestMusica.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/TestMusica.java" title="TestMusica.java" tooltip="Labs/src/lab04/TestMusica.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/TestMusica.java"/>
@@ -60,13 +60,13 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/TestAlbum.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="771" selectionTopPixel="286"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestaPerfilPlaylist.java" partName="TestaPerfilPlaylist.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/TestaPerfilPlaylist.java" title="TestaPerfilPlaylist.java" tooltip="Labs/src/lab04/TestaPerfilPlaylist.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestaPerfilPlaylist.java" partName="TestaPerfilPlaylist.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/TestaPerfilPlaylist.java" title="TestaPerfilPlaylist.java" tooltip="Labs/src/lab04/TestaPerfilPlaylist.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/TestaPerfilPlaylist.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3194" selectionTopPixel="17"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3665" selectionTopPixel="1326"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestaPerfilSimples.java" partName="TestaPerfilSimples.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab04/TestaPerfilSimples.java" title="TestaPerfilSimples.java" tooltip="Labs/src/lab04/TestaPerfilSimples.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab04/TestaPerfilSimples.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1974" selectionTopPixel="710"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2044" selectionTopPixel="782"/>
 </editor>
 </editors>
 <views>
@@ -158,7 +158,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
@@ -207,61 +207,13 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/Album.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/TestaPerfilPlaylist.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/TestaPerfilSimples.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/Perfil.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/TestaPerfilSimples.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/Musica.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/Album.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/TestMusica.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab04/Perfil.java"/>
 </editors>
-<item historyLabel="TestaPerfilSimples.java" index="3">
-<position info="not_deleted" x="1974" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="3189" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2437" y="57"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="3190" y="0"/>
-</item>
-<item historyLabel="Album.java" index="1">
-<position info="not_deleted" x="1533" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="3190" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2600" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2686" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2501" y="6"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2684" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2656" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2681" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2684" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2686" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2898" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2499" y="105"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2651" y="0"/>
-</item>
-<item historyLabel="TestaPerfilPlaylist.java" index="2">
-<position info="not_deleted" x="2538" y="0"/>
-</item>
 <item historyLabel="Perfil.java" index="0">
 <position info="not_deleted" x="1857" y="0"/>
 </item>
@@ -355,8 +307,62 @@
 <item historyLabel="Perfil.java" index="0">
 <position info="not_deleted" x="1138" y="0"/>
 </item>
-<item active="true" historyLabel="TestaPerfilPlaylist.java" index="2">
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
 <position info="not_deleted" x="2794" y="0"/>
+</item>
+<item historyLabel="Perfil.java" index="4">
+<position info="not_deleted" x="1283" y="0"/>
+</item>
+<item historyLabel="Perfil.java" index="4">
+<position info="not_deleted" x="1369" y="0"/>
+</item>
+<item historyLabel="Perfil.java" index="4">
+<position info="not_deleted" x="1065" y="0"/>
+</item>
+<item historyLabel="TestaPerfilSimples.java" index="5">
+<position info="not_deleted" x="2044" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3552" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3347" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3350" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3463" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3540" y="0"/>
+</item>
+<item historyLabel="Perfil.java" index="4">
+<position info="not_deleted" x="1091" y="0"/>
+</item>
+<item historyLabel="Musica.java" index="6">
+<position info="not_deleted" x="107" y="0"/>
+</item>
+<item historyLabel="Album.java" index="7">
+<position info="not_deleted" x="1533" y="0"/>
+</item>
+<item historyLabel="TestMusica.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3540" y="0"/>
+</item>
+<item historyLabel="Perfil.java" index="9">
+<position info="not_deleted" x="1128" y="36"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="2495" y="0"/>
+</item>
+<item historyLabel="TestaPerfilPlaylist.java" index="2">
+<position info="not_deleted" x="3665" y="0"/>
+</item>
+<item active="true" historyLabel="Perfil.java" index="9">
+<position info="not_deleted" x="1128" y="36"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

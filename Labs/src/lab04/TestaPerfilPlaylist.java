@@ -79,28 +79,38 @@ public class TestaPerfilPlaylist {
 		try {
 			Assert.assertEquals(xx, italoMedeiros.retornaAlbum("xxx"));
 		} catch (Exception e) {
-			Assert.assertEquals(e.getMessage(), "Album não pertence ao Perfil especificado.");
+			Assert.assertEquals(e.getMessage(), "Album nao pertence ao Perfil especificado.");
 		}
 		
 		try {
 			Assert.assertEquals(fffree, italoMedeiros.retornaMusica("LeGal", 2));
 		} catch (Exception e) {
-			Assert.assertEquals(e.getMessage(), "Album não pertence ao Perfil especificado.");
+			Assert.assertEquals(e.getMessage(), "Album nao pertence ao Perfil especificado.");
 		}
 		
 		italoMedeiros.adicionaPlaylist("Gotico cansado", "XX", 4);
-		
 		Assert.assertEquals(shelter, italoMedeiros.getSuasPlaylist().get("Gotico cansado").getAlbum().get(0));
 		
 		italoMedeiros.adicionaPlaylist("Gotico cansado", "Caravana Sereia Bloom", 4);
 		Assert.assertEquals(shelter, italoMedeiros.getSuasPlaylist().get("Gotico cansado").getAlbum().get(0));
 		Assert.assertEquals(streetsBloom, italoMedeiros.getSuasPlaylist().get("Gotico cansado").getAlbum().get(1));
 		
+		// testa se add musicas numa playlist exclui a playlist anterior
 		italoMedeiros.adicionaPlaylist("Faixas Favoritas", "XX", 5);
 		Assert.assertEquals(infinity, italoMedeiros.getSuasPlaylist().get("Faixas Favoritas").getAlbum().get(0));
 	
 		Assert.assertEquals(shelter, italoMedeiros.getSuasPlaylist().get("Gotico cansado").getAlbum().get(0));
-			
+		
+		// testa se playlist add musicas iguais
+		
+		try {
+			italoMedeiros.adicionaPlaylist("Gotico cansado", "XX", 4);
+		} catch (Exception e) {
+			Assert.assertEquals(e.getMessage(), "Essa musica ja estava na playlist.");
+		}
+		
+		italoMedeiros.adicionaPlaylist("Gotico cansado", "Caravana Sereia Bloom", 2);
+		Assert.assertEquals(retrovisor, italoMedeiros.getSuasPlaylist().get("Gotico cansado").getAlbum().get(2));
 			
 	}
 

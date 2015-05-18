@@ -31,11 +31,19 @@ public class Perfil {
 	
 	public void adicionaPlaylist(String nomePlaylist, String nomeAlbum, int faixa) throws Exception {
 
+		boolean jaTemMusica;
 		Musica musica = retornaMusica(nomeAlbum, faixa);
 		
 		if (suasPlaylists.containsKey(nomePlaylist)) {
 			Album playlist = suasPlaylists.get(nomePlaylist);
-			playlist.addMusica(musica);
+			jaTemMusica = playlist.getAlbum().contains(musica);
+			
+			if(!jaTemMusica) {
+				playlist.addMusica(musica);
+			} else {
+				throw new Exception("Essa musica ja estava na playlist.");
+			}
+		
 		} else {
 			Album novaPlaylist = new Album(nomePlaylist, "Varios artistas.", 0);
 			novaPlaylist.addMusica(musica);
@@ -43,6 +51,7 @@ public class Perfil {
 		}
 		
 	}
+	
 	
 	public Album retornaAlbum(String nomeAlbum) throws Exception {
 		
@@ -56,7 +65,7 @@ public class Perfil {
 		
 		}
 		
-		throw new Exception("Album não pertence ao Perfil especificado.");
+		throw new Exception("Album nao pertence ao Perfil especificado.");
 			
 	}
 	
