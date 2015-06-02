@@ -1,0 +1,15 @@
+package lab05;
+
+import java.util.List;
+
+public class Fachada {
+	
+	private List usuarios;
+	
+	
+	public void vendeJogo(Usuario usuario, Jogo jogo){
+	
+		
+	}
+	
+}
