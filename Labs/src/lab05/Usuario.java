@@ -2,35 +2,48 @@ package lab05;
 
 import java.util.List;
 
+
+
 public class Usuario {
 
 	private String nome;
 	private String login;
 	private List jogosComprados;
 	private double dinheiro;
-	private tipoUsuario tipo;
 	
-	public Usuario(String nome, String login, List jogosComprados, double dinheiro, tipoUsuario tipo) throws Exception {
+	public Usuario(String nome, String login, List jogosComprados, double dinheiro) {
 		
-		if ( (nome == null || login == null) || (nome.equals("") || login.equals("")) ) {
-			throw new Exception("Nao foi possivel concluir login.");
-		} else {
-			this.nome = nome;
-			this.login = login;
-		}
-		
+		this.nome = nome;
+		this.login = login;
 		this.jogosComprados = jogosComprados;
 		this.dinheiro = dinheiro;
-		this.tipo = tipo;
 	}
 
-	public void compraJogo(Jogo jogo, double valorCompra) throws Exception {
+	public void compraJogo(Jogo jogo) {
+		
+		double desconto = calculaDesconto(jogo.getPreco());
+		double valorCompra = jogo.getPreco() - desconto;
 		this.dinheiro = this.dinheiro - valorCompra;
 		jogosComprados.add(jogo);
 	}
 	
-
+	public double calculaDesconto(double jogoPreco){
+		return 0;
+	}
 	
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof Usuario) {
+
+			Usuario outroUsuario = (Usuario) obj;
+			if (this.login.equals(outroUsuario.login)){
+				return true;
+			}
+		}
+		return false;
+	}
+
+	// getters and setters
 	public String getNome() {
 		return nome;
 	}
@@ -63,15 +76,4 @@ public class Usuario {
 		this.dinheiro = dinheiro;
 	}
 
-	public tipoUsuario getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(tipoUsuario tipo) {
-		this.tipo = tipo;
-	}
-	
-	enum tipoUsuario {
-		Noob, Veterano
-	}
 }

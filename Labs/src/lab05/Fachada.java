@@ -1,8 +1,11 @@
 package lab05;
 
+import java.util.HashSet;
 import java.util.List;
 
 import lab05.Usuario.tipoUsuario;
+
+
 
 public class Fachada {
 	
@@ -11,26 +14,16 @@ public class Fachada {
 	
 	public void vendeJogo(Usuario usuario, Jogo jogo) throws Exception {
 	
-		double valorCompra = calculaBeneficio(usuario, jogo.getPreco());
+		double jogoPreco = jogo.getPreco();
 		
-		if (valorCompra > usuario.getDinheiro()) {
+		if (jogoPreco > usuario.getDinheiro()) {
 			throw new Exception("Voce nao tem saldo suficiente");
 		} else {
 			Jogo copiaDoUsuario = copia(jogo);
-			usuario.compraJogo(copiaDoUsuario, valorCompra);
+			usuario.compraJogo(copiaDoUsuario);
 		}
 	}
 		
-	public double calculaBeneficio(Usuario usuario, double jogoPreco){
-		double valorCompra;
-			if (usuario.getTipo().equals(tipoUsuario.Veterano)) {
-				valorCompra = jogoPreco * (1 - 0.2);
-			} else {
-				valorCompra = jogoPreco * (1 - 0.1);
-			}
-		
-		return valorCompra;
-	}
 	
 	public Jogo copia(Jogo jogo) throws Exception{
 		
@@ -38,9 +31,9 @@ public class Fachada {
 		
 		String copiaNome = jogo.getNome();
 		double copiaPreco = jogo.getPreco();
-		List copiaJogabilidades = jogo.getJogabadilidades();
+		HashSet copiaJogabilidades = jogo.getJogabilidades();
 		
-		copiaDeJogo = new Jogo(copiaNome, copiaPreco);
+		copiaDeJogo = new Jogo(copiaNome, copiaPreco, copiaJogabilidades);
 		return copiaDeJogo;
 	}
 	
