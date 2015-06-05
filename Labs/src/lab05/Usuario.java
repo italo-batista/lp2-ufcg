@@ -1,8 +1,7 @@
 package lab05;
 
+import java.util.Iterator;
 import java.util.List;
-
-
 
 public class Usuario {
 
@@ -10,6 +9,7 @@ public class Usuario {
 	private String login;
 	private List jogosComprados;
 	private double dinheiro;
+	
 	
 	public Usuario(String nome, String login, List jogosComprados, double dinheiro) {
 		
@@ -43,6 +43,36 @@ public class Usuario {
 		return false;
 	}
 
+	public String toString(){
+
+		StringBuffer sb = new StringBuffer();
+		final String endOfLine = System.getProperty("line.separator");		
+		
+		sb.append(this.login);
+		sb.append(endOfLine);
+		sb.append(this.nome);
+		sb.append(endOfLine);
+		sb.append("Lista de Jogos:");
+		sb.append(endOfLine);
+		
+		double gastoComJogos = 0;
+		
+		Iterator<Jogo> iterator = this.jogosComprados.iterator();
+		while (iterator.hasNext()) {	
+			Jogo jogo = iterator.next();
+			sb.append(jogo);
+			sb.append(endOfLine);
+			gastoComJogos = gastoComJogos + jogo.getPreco();
+		}		
+		
+		sb.append("Total de preco dos jogos: R$ ");
+		sb.append(gastoComJogos);
+		sb.append(endOfLine);
+		sb.append(endOfLine);
+		
+		return sb.toString();
+	}
+	
 	// getters and setters
 	public String getNome() {
 		return nome;

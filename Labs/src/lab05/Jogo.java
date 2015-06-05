@@ -2,6 +2,7 @@ package lab05;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 public class Jogo {
@@ -50,10 +51,21 @@ public class Jogo {
 	}
 
 	public String toString() {
-		String m = "O jogo "+ this.nome +" cujo valor eh R$ "+ this.preco 
-				+" ja foi jogado "+ this.vezesJogadas +", das quais"+ this.vezesZeradas +"foram zeradas." +
-				" O maior score obtido foi "+ this.maiorScore;
-		return m;
+
+		StringBuffer sb = new StringBuffer();
+		final String endOfLine = System.getProperty("line.separator");		
+	
+		sb.append(endOfLine);
+		sb.append("+ "+ this.nome +":");
+		sb.append(endOfLine);
+		sb.append("==> Jogou "+ vezesJogadas +" vez(es)");
+		sb.append(endOfLine);
+		sb.append("==> Zerou "+ vezesZeradas +" vez(es)");
+		sb.append(endOfLine);
+		sb.append("==> Maior score: "+ maiorScore);
+		sb.append(endOfLine);
+		return sb.toString();
+		
 	}
 
 	// gets and setters

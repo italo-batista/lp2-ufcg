@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="29" version="2.0">
+<workbench progressCount="31" version="2.0">
 <workbenchAdvisor/>
-<window height="743" maximized="true" width="716" x="57" y="24">
+<window height="744" maximized="true" width="789" x="0" y="-28">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -18,6 +18,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="232" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="96" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditorNoSource" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -38,15 +39,15 @@
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Jogo.java" partName="Jogo.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab05/Jogo.java" title="Jogo.java" tooltip="Labs/src/lab05/Jogo.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab05/Jogo.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="740" selectionTopPixel="476"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="755" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Usuario.java" partName="Usuario.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab05/Usuario.java" title="Usuario.java" tooltip="Labs/src/lab05/Usuario.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Usuario.java" partName="Usuario.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab05/Usuario.java" title="Usuario.java" tooltip="Labs/src/lab05/Usuario.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab05/Usuario.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="641" selectionTopPixel="34"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1196" selectionTopPixel="325"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Fachada.java" partName="Fachada.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab05/Fachada.java" title="Fachada.java" tooltip="Labs/src/lab05/Fachada.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab05/Fachada.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="285" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Loja.java" partName="Loja.java" path="/home/italo/Documentos/UFCG/2P/lp2-ufcg/Labs/src/lab05/Loja.java" title="Loja.java" tooltip="Labs/src/lab05/Loja.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Labs/src/lab05/Loja.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1129" selectionTopPixel="323"/>
 </editor>
 </editors>
 <views>
@@ -76,7 +77,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.ui.resourcePerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.ui.resourcePerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -111,7 +112,6 @@
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@2108bd" orientation="512" selectedTabId="org.eclipse.jdt.junit.ResultView" style="0">
 <fastViews>
@@ -125,6 +125,11 @@
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
+<fastViewBar fastViewLocation="16384" id="topLeft" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="0">
+<fastViews>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
 <fastViewBar fastViewLocation="1024" id="bottomRight" orientation="256" selectedTabId="org.eclipse.ui.views.TaskList" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
@@ -134,14 +139,12 @@
 <layout>
 <mainWindow>
 <info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
@@ -181,168 +184,165 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Fachada.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Usuario.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Noob.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Veterano.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Plataforma.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/RPG.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Luta.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/JogoFactory.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/ojogo/copy/Jogo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/sistema/Fachada.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/sistema/Usuario.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Jogo.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Loja.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Usuario.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Veterano.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Noob.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/RPG.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Plataforma.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Labs/src/lab05/Luta.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" org.eclipse.jdt.ui.ClassFileIdentifier="=Labs/\/usr\/lib\/jvm\/java-7-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(Object.class"/>
 </editors>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="263" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2361" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="263" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="641" y="0"/>
-</item>
-<item historyLabel="Noob.java" index="2">
-<position info="not_deleted" x="331" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="641" y="0"/>
-</item>
-<item historyLabel="Noob.java" index="2">
-<position info="not_deleted" x="331" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="511" y="0"/>
-</item>
-<item historyLabel="Noob.java" index="2">
-<position info="not_deleted" x="331" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="263" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="252" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="452" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="400" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="452" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="400" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="452" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="400" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="452" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
-</item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
-</item>
-<item historyLabel="Noob.java" index="2">
-<position info="not_deleted" x="331" y="0"/>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1396" y="0"/>
 </item>
 <item historyLabel="Veterano.java" index="3">
-<position/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Noob.java" index="2">
-<position info="not_deleted" x="77" y="129"/>
-</item>
-<item historyLabel="Veterano.java" index="3">
-<position info="not_deleted" x="218" y="0"/>
-</item>
-<item historyLabel="Noob.java" index="2">
-<position info="not_deleted" x="209" y="120"/>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1396" y="0"/>
 </item>
 <item historyLabel="Veterano.java" index="3">
-<position info="not_deleted" x="337" y="0"/>
+<position info="not_deleted" x="1097" y="0"/>
 </item>
-<item historyLabel="Plataforma.java" index="4">
-<position info="not_deleted" x="103" y="0"/>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1396" y="0"/>
 </item>
-<item historyLabel="Veterano.java" index="3">
-<position info="not_deleted" x="337" y="0"/>
+<item historyLabel="Noob.java" index="4">
+<position info="not_deleted" x="1085" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1396" y="0"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="1462" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1137" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="1963" y="588"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="1022" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1137" y="0"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="1022" y="0"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="1171" y="0"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1375" y="21"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="1465" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2161" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1396" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2161" y="0"/>
 </item>
 <item historyLabel="RPG.java" index="5">
-<position info="not_deleted" x="197" y="0"/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
+<item historyLabel="Plataforma.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Luta.java" index="6">
-<position info="not_deleted" x="196" y="0"/>
+<item historyLabel="Luta.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="994" y="474"/>
 </item>
-<item historyLabel="JogoFactory.java" index="7">
-<position info="not_deleted" x="1052" y="0"/>
+<item historyLabel="RPG.java" index="5">
+<position info="not_deleted" x="196" y="513"/>
 </item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="639" y="0"/>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="994" y="474"/>
 </item>
-<item historyLabel="Jogo.java" index="8">
-<position info="not_deleted" x="740" y="0"/>
+<item historyLabel="Plataforma.java" index="6">
+<position info="not_deleted" x="420" y="0"/>
 </item>
-<item historyLabel="Jogo.java" index="8">
-<position info="not_deleted" x="745" y="0"/>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="994" y="474"/>
 </item>
-<item historyLabel="Fachada.java" index="9">
-<position info="not_deleted" x="310" y="0"/>
+<item historyLabel="Luta.java" index="7">
+<position info="not_deleted" x="401" y="0"/>
 </item>
-<item historyLabel="Fachada.java" index="9">
-<position info="not_deleted" x="312" y="0"/>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="755" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="10">
-<position info="not_deleted" x="664" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2161" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="10">
-<position info="not_deleted" x="666" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="362" y="0"/>
 </item>
-<item historyLabel="Jogo.java" index="11">
-<position info="not_deleted" x="745" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="507" y="0"/>
 </item>
-<item historyLabel="Jogo.java" index="11">
-<position info="not_deleted" x="740" y="0"/>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1610" y="0"/>
 </item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="287" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="507" y="0"/>
 </item>
-<item historyLabel="Fachada.java" index="0">
-<position info="not_deleted" x="285" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="1933" y="0"/>
 </item>
-<item historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="643" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="1500" y="0"/>
 </item>
-<item active="true" historyLabel="Usuario.java" index="1">
-<position info="not_deleted" x="641" y="0"/>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2366" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="930" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2527" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="930" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2161" y="0"/>
+</item>
+<item historyLabel="Usuario.java" index="2">
+<position info="not_deleted" x="1196" y="0"/>
+</item>
+<item historyLabel="Jogo.java" index="0">
+<position info="not_deleted" x="755" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="1936" y="0"/>
+</item>
+<item historyLabel="Object.class" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="1936" y="0"/>
+</item>
+<item historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2556" y="0"/>
+</item>
+<item active="true" historyLabel="Loja.java" index="1">
+<position info="not_deleted" x="2193" y="24"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -370,50 +370,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JogoFactory.java" tooltip="Labs/src/lab05/JogoFactory.java">
-<persistable path="/Labs/src/lab05/JogoFactory.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" name="Object.class" tooltip="java.lang.Object">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Labs/\/usr\/lib\/jvm\/java-7-openjdk-i386\/jre\/lib\/rt.jar&lt;java.lang(Object.class"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Luta.java" tooltip="Labs/src/lab05/Luta.java">
 <persistable path="/Labs/src/lab05/Luta.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RPG.java" tooltip="Labs/src/lab05/RPG.java">
-<persistable path="/Labs/src/lab05/RPG.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Plataforma.java" tooltip="Labs/src/lab05/Plataforma.java">
 <persistable path="/Labs/src/lab05/Plataforma.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Veterano.java" tooltip="Labs/src/lab05/Veterano.java">
-<persistable path="/Labs/src/lab05/Veterano.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RPG.java" tooltip="Labs/src/lab05/RPG.java">
+<persistable path="/Labs/src/lab05/RPG.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Noob.java" tooltip="Labs/src/lab05/Noob.java">
 <persistable path="/Labs/src/lab05/Noob.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Jogabilidade.java" tooltip="Labs/src/lab05/Jogabilidade.java">
-<persistable path="/Labs/src/lab05/Jogabilidade.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Veterano.java" tooltip="Labs/src/lab05/Veterano.java">
+<persistable path="/Labs/src/lab05/Veterano.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Loja.java" tooltip="Labs/src/lab05/Loja.java">
-<persistable path="/Labs/src/lab05/Loja.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mochila.java" tooltip="Provas/src/prova01/Mochila.java">
+<persistable path="/Provas/src/prova01/Mochila.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Album.java" tooltip="Labs/src/lab04/Album.java">
-<persistable path="/Labs/src/lab04/Album.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mensagem.java" tooltip="Provas/src/prova01/Mensagem.java">
+<persistable path="/Provas/src/prova01/Mensagem.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Usuario.java" tooltip="Labs/src/lab05/Usuario.java">
-<persistable path="/Labs/src/lab05/Usuario.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Item.java" tooltip="Provas/src/prova01/Item.java">
+<persistable path="/Provas/src/prova01/Item.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Heroi.java" tooltip="Provas/src/prova01/Heroi.java">
+<persistable path="/Provas/src/prova01/Heroi.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Arma.java" tooltip="Provas/src/prova01/Arma.java">
+<persistable path="/Provas/src/prova01/Arma.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Estoque.java" tooltip="Labs/src/lab03/Estoque.java">
+<persistable path="/Labs/src/lab03/Estoque.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Perfil.java" tooltip="Labs/src/lab04/Perfil.java">
+<persistable path="/Labs/src/lab04/Perfil.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Musica.java" tooltip="Labs/src/lab04/Musica.java">
 <persistable path="/Labs/src/lab04/Musica.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Jogo.java" tooltip="Labs/src/lab05/Jogo.java">
-<persistable path="/Labs/src/lab05/Jogo.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestaPerfilSimples.java" tooltip="Labs/src/lab04/TestaPerfilSimples.java">
-<persistable path="/Labs/src/lab04/TestaPerfilSimples.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestaPerfilPlaylist.java" tooltip="Labs/src/lab04/TestaPerfilPlaylist.java">
-<persistable path="/Labs/src/lab04/TestaPerfilPlaylist.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mochila.java" tooltip="Provas/src/prova01/Mochila.java">
-<persistable path="/Provas/src/prova01/Mochila.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Album.java" tooltip="Labs/src/lab04/Album.java">
+<persistable path="/Labs/src/lab04/Album.java"/>
 </file>
 </mruList>
 </workbench>
