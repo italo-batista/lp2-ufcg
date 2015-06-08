@@ -7,15 +7,13 @@ import java.util.List;
 
 public class Loja {
 	
-	private List usuarios;
-	private List catalogoDeJogos;
+	private List<Usuario> usuarios;
 	private JogoFactory fabricaJogo;
 	private UsuarioFactory fabricaUsuario;
 	private double totalArrecadado;
 	
 	public Loja(){
 		usuarios = new ArrayList<Usuario>();
-		catalogoDeJogos = new ArrayList<Jogo>();
 		fabricaJogo = new JogoFactory();
 		fabricaUsuario = new UsuarioFactory();
 		totalArrecadado = 0;
@@ -26,45 +24,76 @@ public class Loja {
 		usuarios.add(novoUsuario);
 	}
 	
-	public void novoJogo(String nome, double preco, HashSet<Jogabilidade> jogabilidades, String tipo){
-		Jogo novoJogo = fabricaJogo.criaJogo(nome, preco, jogabilidades, tipo);
-		catalogoDeJogos.add(novoJogo);
-	}
-
 	public void addDinheiro(Usuario usuario, double dinheiroAdicional){
 		usuario.setDinheiro( usuario.getDinheiro() + dinheiroAdicional );
 	}
 	
-	public void vendeJogo(Usuario usuario, Jogo jogo) throws Exception {
-	
-		double jogoPreco = jogo.getPreco();
+	public void criaJogo(Usuario usuario, String nomeJogo, double precoJogo, HashSet<Jogabilidade> jogabilidades, String tipoJogo) throws Exception {
 		
-		if (jogoPreco > usuario.getDinheiro()) {
+		if (precoJogo > usuario.getDinheiro()) {
 			throw new Exception("Voce nao tem saldo suficiente");
 		} else {
-			Jogo copiaDoUsuario = copiaJogo(jogo);
-			usuario.compraJogo(copiaDoUsuario);
+			Jogo novoJogo = fabricaJogo.criaJogo(nomeJogo, precoJogo, jogabilidades, tipoJogo);
+			usuario.compraJogo(novoJogo);
 			
-			double valorVenda = usuario.calculaDesconto(jogoPreco);
+			double valorVenda = usuario.calculaDesconto(precoJogo);
 			calcTotalArrecadado(valorVenda);
 		}
-	}
-
-	public Jogo copiaJogo(Jogo jogo) throws Exception{
-		
-		Jogo copiaDeJogo;
-		
-		String copiaNome = jogo.getNome();
-		double copiaPreco = jogo.getPreco();
-		HashSet copiaJogabilidades = jogo.getJogabilidades();
-		
-		copiaDeJogo = new Jogo(copiaNome, copiaPreco, copiaJogabilidades);
-		return copiaDeJogo;
 	}
 	
 	public void calcTotalArrecadado(double valorVenda){
 		this.totalArrecadado = this.totalArrecadado + valorVenda;
 	}
+	
+	public void upgrade(String login) throws Exception {
+		
+		for (Usuario usuario: usuarios) {
+			if (usuario.getLogin().equals("login")){
+			
+				if (usuario instanceof Veterano) {
+					throw new Exception("Usuario ja eh Veterano!");
+				} else if (usuario.getX2p() >= 1000) {
+			
+					String nomeUsuario = usuario.getNome();
+					String loginUsuario = usuario.getLogin();
+					double dinheiroUsuario = usuario.getDinheiro();
+					List<Jogo> jogosUsuario = usuario.getJogosComprados();
+					int x2pUsuario = usuario.getX2p();
+					
+					Usuario novoUsuario = new Veterano(nomeUsuario, loginUsuario, jogosUsuario, dinheiroUsuario);
+					novoUsuario.setX2p(x2pUsuario);
+				
+					usuarios.remove(usuario);
+					usuarios.add(novoUsuario);
+				}
+			}
+		} // encerra loop	
+	}
+	
+	public void downgrade(String login) throws Exception{
+		
+		for (Usuario usuario: usuarios) {
+			if (usuario.getLogin().equals("login")){
+			
+				if (usuario instanceof Noob) {
+					throw new Exception("Usuario ja eh Noob!");
+				} else if (usuario.getX2p() < 1000) {
+			
+					String nomeUsuario = usuario.getNome();
+					String loginUsuario = usuario.getLogin();
+					double dinheiroUsuario = usuario.getDinheiro();
+					List<Jogo> jogosUsuario = usuario.getJogosComprados();
+					int x2pUsuario = usuario.getX2p();
+					
+					Usuario novoUsuario = new Noob(nomeUsuario, loginUsuario, jogosUsuario, dinheiroUsuario);
+					novoUsuario.setX2p(x2pUsuario);
+				
+					usuarios.remove(usuario);
+					usuarios.add(novoUsuario);
+				}
+			}
+		} // encerra loop	
+	}	
 	
 	public String toString(){
 		StringBuffer sb = new StringBuffer();
@@ -74,14 +103,12 @@ public class Loja {
 		sb.append(endOfLine);
 		sb.append(endOfLine);
 		
-		Iterator<Usuario> iterator = this.usuarios.iterator();
-		while (iterator.hasNext()) {	
-			Usuario usuario = iterator.next();
+		for (Usuario usuario : usuarios) {
 			sb.append(usuario);
 			sb.append(endOfLine);
 			sb.append(endOfLine);
 		}
-
+		
 		sb.append(endOfLine);
 		sb.append("--------------------------------");
 		sb.append("Total arrecadado com vendas de jogos: R$ ");

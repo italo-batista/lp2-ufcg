@@ -1,5 +1,6 @@
 package lab05;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -7,16 +8,17 @@ public class Usuario {
 
 	private String nome;
 	private String login;
-	private List jogosComprados;
+	private List<Jogo> jogosComprados;
 	private double dinheiro;
+	private int x2p;
 	
-	
-	public Usuario(String nome, String login, List jogosComprados, double dinheiro) {
+	public Usuario(String nome, String login, List<Jogo> jogosComprados, double dinheiro) {
 		
 		this.nome = nome;
 		this.login = login;
 		this.jogosComprados = jogosComprados;
 		this.dinheiro = dinheiro;
+		this.x2p = 0;
 	}
 
 	public void compraJogo(Jogo jogo) {
@@ -25,12 +27,43 @@ public class Usuario {
 		double valorCompra = jogo.getPreco() - desconto;
 		this.dinheiro = this.dinheiro - valorCompra;
 		jogosComprados.add(jogo);
+		
+		calculaX2pCompra(jogo);
 	}
 	
 	public double calculaDesconto(double jogoPreco){
 		return 0;
 	}
 	
+	public void calculaX2pCompra(Jogo jogo){
+		this.x2p = this.x2p + (10 * (int) jogo.getPreco());
+	}
+	
+	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou){
+	
+		int novoX2p;
+		
+		for (Jogo jogo : jogosComprados) {
+			if (jogo.getNome().equals(nomeJogo)){
+				novoX2p = jogo.joga(scoreObtido, zerou);
+				this.x2p = this.x2p + novoX2p;
+			}
+		}
+	}
+	
+	public void punir(String nomeJogo, int scoreObtido, boolean zerou){
+		
+		int novoX2p;
+		int punicao = 0;
+		
+		for (Jogo jogo : jogosComprados) {
+			if (jogo.getNome().equals(nomeJogo)){
+				novoX2p = jogo.joga(scoreObtido, zerou) - punicao;
+				this.x2p = this.x2p + novoX2p;
+			}
+		}
+	}
+		
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Usuario) {
@@ -42,7 +75,8 @@ public class Usuario {
 		}
 		return false;
 	}
-
+	
+	@Override
 	public String toString(){
 
 		StringBuffer sb = new StringBuffer();
@@ -90,7 +124,7 @@ public class Usuario {
 		this.login = login;
 	}
 
-	public List getJogosComprados() {
+	public List<Jogo> getJogosComprados() {
 		return jogosComprados;
 	}
 
@@ -105,5 +139,13 @@ public class Usuario {
 	public void setDinheiro(double dinheiro) {
 		this.dinheiro = dinheiro;
 	}
-
+	
+	public void setX2p(double novoX2p){
+		this.x2p = (int) novoX2p;
+	}
+	
+	public int getX2p(){
+		return this.x2p;
+	}
+	
 }

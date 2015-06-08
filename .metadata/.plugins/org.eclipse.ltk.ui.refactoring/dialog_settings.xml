@@ -8,6 +8,9 @@
 		<item value="*" key="patterns"/>
 		<item value="false" key="moveWizard.updateQualifiedNames"/>
 	</section>
+	<section name="UseSupertypeWizard">
+		<item value="false" key="rewriteInstanceOf"/>
+	</section>
 	<section name="InferTypeArguments">
 		<item value="true" key="leaveUnconstrainedRaw"/>
 		<item value="true" key="assumeCloneReturnsSameType"/>

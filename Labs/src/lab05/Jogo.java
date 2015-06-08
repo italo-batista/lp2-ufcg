@@ -24,7 +24,7 @@ public class Jogo {
 		this.jogabilidades = jogabilidades;
 	}
 
-	public void joga(int score, boolean zerou) {
+	public int joga(int score, boolean zerou) {
 
 		this.vezesJogadas = vezesJogadas + 1;
 
@@ -34,8 +34,11 @@ public class Jogo {
 		if (zerou) {
 			this.vezesZeradas = vezesZeradas + 1;
 		}
+		
+		return (Integer) null; 
+		
 	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Jogo) {
@@ -50,6 +53,7 @@ public class Jogo {
 		return false;
 	}
 
+	@Override
 	public String toString() {
 
 		StringBuffer sb = new StringBuffer();
@@ -93,19 +97,19 @@ public class Jogo {
 		this.maiorScore = maiorScore;
 	}
 
-	public int getVezesJogada() {
+	public int getVezesJogadas() {
 		return vezesJogadas;
 	}
 
-	public void setVezesJogada(int vezesJogada) {
+	public void setVezesJogadas(int vezesJogada) {
 		this.vezesJogadas = vezesJogada;
 	}
 
-	public int getVezesZerada() {
+	public int getVezesZeradas() {
 		return vezesZeradas;
 	}
 
-	public void setVezesZerada(int vezesZerada) {
+	public void setVezesZeradas(int vezesZerada) {
 		this.vezesZeradas = vezesZerada;
 	}
 
