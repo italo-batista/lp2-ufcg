@@ -4,31 +4,44 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Noob extends Usuario {
-
-	public Noob(String nome, String login, List jogosComprados, double dinheiro){
+	
+	public Noob(String nome, String login, List jogosComprados, double dinheiro) throws EntradaException{
 		super(nome, login, jogosComprados, dinheiro);
 	}
 	
 	@Override
-	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou){
+	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou) throws DadoInvalidoException {
 
-		int novoX2p; 
+		int novoX2p;
+		int x2pExtra = 0;
 		
 		for (Jogo jogo : super.getJogosComprados()) {
 			
 			if (jogo.getNome().equals(nomeJogo)){
-				int x2pExtra = jogo.joga(scoreObtido, zerou);
+				
+				if (jogo instanceof Plataforma){
+					jogo = (Plataforma) jogo;
+					x2pExtra = jogo.joga(scoreObtido, zerou);
+				} if (jogo instanceof RPG){
+					jogo = (RPG) jogo;
+					x2pExtra = jogo.joga(scoreObtido, zerou);
+				} if (jogo instanceof Luta){
+					jogo = (Luta) jogo;
+					x2pExtra = jogo.joga(scoreObtido, zerou);
+				}
+				
 				int x2pAtual = super.getX2p();
 				int recompensa = calculaRecompensa(jogo);
 				
 				novoX2p = x2pAtual + x2pExtra + recompensa;
-				super.setX2p(novoX2p);
+				//super.setX2p(novoX2p);
+				super.setX2p(30);
 			}
 		}
 	}
 	
 	public int calculaRecompensa(Jogo jogo){
-		int recompensa = (Integer) null;
+		int recompensa = 0;
 		
 		Iterator<Jogabilidade> iterator = jogo.getJogabilidades().iterator();
 		while (iterator.hasNext()){
@@ -45,7 +58,7 @@ public class Noob extends Usuario {
 	}
 	
 	@Override
-	public void punir(String nomeJogo, int scoreObtido, boolean zerou){
+	public void punir(String nomeJogo, int scoreObtido, boolean zerou) throws DadoInvalidoException {
 
 		int novoX2p;
 		
@@ -62,7 +75,7 @@ public class Noob extends Usuario {
 	}
 	
 	public int calculaPunicao(Jogo jogo){
-		int punicao = (Integer) null;
+		int punicao = 0;
 	
 		
 		Iterator<Jogabilidade> iterator = jogo.getJogabilidades().iterator();

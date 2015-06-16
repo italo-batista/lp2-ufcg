@@ -1,0 +1,9 @@
+package lab05;
+
+public class stringInvalidaException extends Exception {
+
+	public stringInvalidaException() {
+		super("Insira um nome valido");
+	}
+	
+}

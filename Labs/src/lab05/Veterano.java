@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Veterano extends Usuario {
 
-	public Veterano(String nome, String login, List jogosComprados, double dinheiro){
+	public Veterano(String nome, String login, List jogosComprados, double dinheiro) throws EntradaException{
 		super(nome, login, jogosComprados, dinheiro);
 	}
 	
 	@Override
-	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou){
+	public void recompensar(String nomeJogo, int scoreObtido, boolean zerou) throws DadoInvalidoException {
 
 		int novoX2p; 
 		
@@ -45,7 +45,7 @@ public class Veterano extends Usuario {
 	}
 	
 	@Override
-	public void punir(String nomeJogo, int scoreObtido, boolean zerou){
+	public void punir(String nomeJogo, int scoreObtido, boolean zerou) throws DadoInvalidoException{
 
 		int novoX2p;
 		

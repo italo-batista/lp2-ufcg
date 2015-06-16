@@ -14,29 +14,44 @@ public class Jogo {
 	private int vezesZeradas;
 	private HashSet jogabilidades;
 
-	public Jogo(String nome, double preco, HashSet<Jogabilidade> jogabilidades) {
+	public Jogo(String nome, double preco, HashSet<Jogabilidade> jogabilidades)
+			throws EntradaException {
 
-		this.nome = nome;
-		this.preco = preco;
+		if (nome.length() == 0) {
+			throw new StringInvalidaException("nome");
+		} else {
+			this.nome = nome;
+		}
+		
+		if (preco < 0) {
+			throw new DadoInvalidoException("Preco");
+		} else {
+			this.preco = preco;
+		} 
+		
+		this.jogabilidades = jogabilidades;
+		
 		this.maiorScore = 0;
 		this.vezesJogadas = 0;
 		this.vezesZeradas = 0;
-		this.jogabilidades = jogabilidades;
 	}
 
-	public int joga(int score, boolean zerou) {
+	public int joga(int score, boolean zerou) throws DadoInvalidoException {
 
-		this.vezesJogadas = vezesJogadas + 1;
+		if (score < 0){
+			throw new DadoInvalidoException("Score");
+		} else {
 
-		if (score > this.maiorScore) {
-			this.maiorScore = score;
+			this.vezesJogadas = vezesJogadas + 1;
+			
+			if (score > this.maiorScore) {
+				this.maiorScore = score;
+			} if (zerou) {
+				this.vezesZeradas = vezesZeradas + 1;
+			}
 		}
-		if (zerou) {
-			this.vezesZeradas = vezesZeradas + 1;
-		}
-		
-		return (Integer) null; 
-		
+           //  (Interger) null
+		return 0; 
 	}
 	
 	@Override

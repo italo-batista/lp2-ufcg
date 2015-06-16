@@ -1,0 +1,12 @@
+package lab05;
+
+public class QuantiaNegativaException extends Exception {
+
+	public QuantiaNegativaException () {
+		super("A quantia nao pode ser negativa!");
+	}
+	
+	public QuantiaNegativaException (String msg) {
+		super(msg +" nao pode ser um valor negativo!");
+	}
+}

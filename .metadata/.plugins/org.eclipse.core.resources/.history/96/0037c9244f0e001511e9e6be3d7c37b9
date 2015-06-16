@@ -1,0 +1,9 @@
+package lab05;
+
+public class stringVaziaException {
+
+	public stringVaziaException() {
+		super("Insira um nome valido");
+	}
+	
+}

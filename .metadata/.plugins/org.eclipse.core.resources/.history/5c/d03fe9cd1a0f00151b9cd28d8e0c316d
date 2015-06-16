@@ -1,0 +1,37 @@
+package lab05;
+
+import static org.junit.Assert.*;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+
+public class JogoTesto {
+
+	@Before
+	public void setUp() throws Exception {
+	
+		HashSet jogabilidades = new HashSet<Jogabilidade>();
+		jogabilidades.add(Jogabilidade.OFFLINE);
+		
+		Jogo zombieEx = new Jogo("Zombie Exterminator", 22.99, jogabilidades);  
+		
+		Assert.assertEquals("Zombie Exterminator", zombieEx.getNome());
+		Assert.assertEquals(22.99, zombieEx.getPreco(), 0);
+		Assert.assertEquals(jogabilidades, zombieEx.getJogabilidades());
+		Assert.assertEquals(0, zombieEx.getVezesJogadas());
+		Assert.assertEquals(0, zombieEx.getVezesZeradas());
+		Assert.assertEquals(0, zombieEx.getMaiorScore());
+	}
+
+	/*
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+	*/
+}

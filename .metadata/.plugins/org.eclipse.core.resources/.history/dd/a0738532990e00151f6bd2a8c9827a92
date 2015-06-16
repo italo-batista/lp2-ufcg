@@ -1,0 +1,9 @@
+package lab05;
+
+public class saldoInsuficienteException extends Exception {
+
+	public saldoInsuficienteException() {
+		super("Voce nao tem saldo suficiente");
+	}
+	
+}

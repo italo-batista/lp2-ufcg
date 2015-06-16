@@ -24,7 +24,7 @@ public class Perfil {
 	}
 
 	public void adicionaAlbum(Album album) {
-			seusAlbuns.add(album);
+		seusAlbuns.add(album);
 	}
 
 	public void adicionaAosFavoritos(Album album) {

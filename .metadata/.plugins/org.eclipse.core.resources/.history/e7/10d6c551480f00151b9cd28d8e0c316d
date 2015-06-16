@@ -1,0 +1,39 @@
+package lab05;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class UsuarioFactoryTest {
+
+	ArrayList jogosComprados;
+	Usuario novoUsuario;
+	UsuarioFactory fabricaUsuario= new UsuarioFactory();
+	
+	@Test
+	public void testCriaJogos() throws TipoJogoException, EntradaException {
+		
+		jogosComprados = new ArrayList<Jogo>();
+	
+		novoUsuario = fabricaUsuario.criaUsuario("Italo Medeiros", "italo-medeiros", jogosComprados, 200, "Veterano");
+		
+		Assert.assertEquals("Italo Medeiros", novoUsuario.getNome());
+		Assert.assertEquals("italo-medeiros", novoUsuario.getLogin());
+		Assert.assertEquals(200, novoUsuario.getDinheiro(), 0);
+		Assert.assertEquals(jogosComprados, novoUsuario.getJogosComprados());
+		
+		
+		Assert.assertTrue(novoJogo instanceof RPG);
+		
+		novoUsuario = fabricaUsuario.criaJogo("Zombie Exterminator", 20, jogabilidades, "Plataforma");
+		Assert.assertTrue(novoJogo instanceof Plataforma);
+		
+		novoUsuario = fabricaUsuario.criaJogo("Zombie Exterminator", 20, jogabilidades, "Luta");
+		Assert.assertTrue(novoJogo instanceof Luta);
+		
+	}
+}

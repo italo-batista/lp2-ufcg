@@ -1,0 +1,27 @@
+package lab05;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+	String nome;
+	String login;
+	List<Jogo> jogosComprados;
+	double dinheiro;
+	int x2p;
+
+public class UsuarioTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

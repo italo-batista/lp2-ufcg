@@ -1,0 +1,28 @@
+package lab05;
+
+import static org.junit.Assert.*;
+
+import java.util.HashSet;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class JogoFactoryTest {
+
+	HashSet jogabilidades;
+	Jogo novoJogo;
+	JogoFactory fabricaJogo = new JogoFactory();
+	
+	@Test
+	public void testCriaJogos() {
+		
+		jogabilidades = new HashSet<Jogabilidade>();
+		jogabilidades.add(Jogabilidade.OFFLINE);
+		novoJogo = fabricaJogo.criaJogo("Zombie Exterminator", 20, jogabilidades, tipo)
+		
+		
+	}
+
+
+
+}
