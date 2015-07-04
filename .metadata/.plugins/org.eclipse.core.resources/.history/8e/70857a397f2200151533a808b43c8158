@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class CatalogoJogos {
+
+	private List<Jogo> catalogo;
+	
+	public CatalogoJogos() {
+		catalogo = new ArrayList(); 
+	}
+	
+	
+	public void adicionaJogo(Jogo jogo){
+		catalogo.add(jogo);
+	}
+	
+	public void removeJogo(Jogo jogo){
+		catalogo.remove(jogo);
+	}
+	
+	public Jogo pesquisaJogo(String jogoPesquisado){
+		Jogo jogoRetornado = null;
+		
+		for (Jogo jogo : catalogo ) {
+			if (jogoPesquisado.equals( jogo.getNome() )) {
+				jogoRetornado = jogo;
+			} }	
+		return jogoRetornado;
+	}
+
+	public Jogo getJogoMaioScore(){
+		Jogo jogoMaiorScore = null;
+		double maiorScore = 0;
+		
+		for (Jogo jogo : catalogo ) {
+			if (jogo.getMaiorScore() > maiorScore ) {
+				jogoMaiorScore = jogo;
+			} }	
+		return jogoRetornado;
+	}
+	
+}

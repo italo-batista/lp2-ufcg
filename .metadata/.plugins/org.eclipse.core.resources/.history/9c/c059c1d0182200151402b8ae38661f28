@@ -1,0 +1,8 @@
+
+public class Façade {
+
+	public Façade() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

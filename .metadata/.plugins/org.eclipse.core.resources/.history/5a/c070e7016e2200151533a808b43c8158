@@ -1,0 +1,12 @@
+
+public class Façade {
+
+	private Controller controller;
+	
+	public Façade() {
+		controller = new Controller();
+	}
+	
+	
+	
+}

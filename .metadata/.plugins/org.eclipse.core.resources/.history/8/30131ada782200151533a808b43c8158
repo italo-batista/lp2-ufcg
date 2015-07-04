@@ -1,0 +1,10 @@
+
+public class CatalogoJogos {
+
+	private List<Jogo> catalogo;
+	
+	public CatalogoJogos() {
+		// TODO Auto-generated constructor stub
+	}
+	
+}

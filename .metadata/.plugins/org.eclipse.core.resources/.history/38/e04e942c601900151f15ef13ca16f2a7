@@ -1,0 +1,29 @@
+package lista03_her_comp;
+
+public class Humano {
+
+	public void ataca(Heroi outroHeroi, int dano, int energia){
+		energia = energia - 10;
+		outroHeroi.recebeDano((int)dano);
+		if (outroHeroi.vida > 0) { outroHeroi.papel.defende(); }
+		
+		return energia;
+	}
+	
+	public int recebeDano(int dano, int vida){
+		vida = vida - (dano / 2);
+		return vida;
+	}
+	
+	public void cura(Heroi outroHeroi){
+		this.energia = this.energia - 20;
+	}
+	
+	public void recuperaEnergia(){
+		this.energia = this.energia + 50;
+		if (this.energia > 100) {
+			this.energia = 100;
+		}
+	}
+	
+}
