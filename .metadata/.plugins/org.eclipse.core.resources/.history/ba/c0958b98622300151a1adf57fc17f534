@@ -1,0 +1,13 @@
+
+public class Jogar {
+	
+	public Jogar() {
+		
+	}
+	
+	public void jogar(double dinheiro){
+		dinheiro = dinheiro - 5;
+		return dinheiro;
+	}
+	
+}

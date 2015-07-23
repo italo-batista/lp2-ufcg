@@ -1,0 +1,26 @@
+public class Diretor extends Gerente {
+	protected String setor;
+	private String nome;
+	public static final double PERC_IMPOSTO = 0.2;
+	public static final double ADIC_SETOR = 300.0;
+
+	public Diretor(String nome, double salarioBruto, String setor) {
+		super(nome, salarioBruto);
+		this.setor = setor;
+		this.nome = nome;
+	}
+
+	public double calculaSalarioLiquido() {
+		double salarioLiquido = getSalarioBruto() + ADIC_SETOR;
+		salarioLiquido = salarioLiquido - (salarioLiquido * PERC_IMPOSTO);
+		return salarioLiquido;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public String getDepartamento() {
+		return this.setor;
+	}
+}

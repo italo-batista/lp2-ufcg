@@ -1,0 +1,34 @@
+import exceptions.SaldoInsuficienteException;
+
+
+public class Jogador {
+
+	public Jogador() {
+		
+	}
+	
+	public double compraJogo(Jogo jogo, double dinheiro, CatalogoJogos jogosComprados) throws SaldoInsuficienteException {
+		
+		if (dinheiro > jogo.getPreco()) {
+			double desconto = calculaDesconto(jogo.getPreco());
+			double valorCompra = jogo.getPreco() - desconto;
+			dinheiro = dinheiro - valorCompra;
+			
+			jogosComprados.adicionaJogo(jogo);
+			calculaX2pCompra(jogo);
+			
+			return dinheiro;
+		} else {
+			throw new SaldoInsuficienteException();
+		}
+	}
+	
+	public double calculaDesconto(double jogoPreco){
+		return 0;
+	}
+	
+	public int calculaX2pCompra(Jogo jogo, int x2p){
+		x2p = x2p + (10 * (int) jogo.getPreco());
+		return x2p;
+	}
+}

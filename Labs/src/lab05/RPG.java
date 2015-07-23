@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class RPG extends Jogo {
 	
 	public RPG(String nome, double preco, HashSet<Jogabilidade> jogabilidades) throws EntradaException {
-			super(nome, preco, jogabilidades);
+		super(nome, preco, jogabilidades);
 	}
 
 	@Override

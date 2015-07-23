@@ -1,0 +1,13 @@
+
+public class Jogar {
+	
+	public Jogar() {
+		
+	}
+	
+	public double jogar(double dinheiro){
+		dinheiro = dinheiro - 5;
+		return dinheiro;
+	}
+	
+}

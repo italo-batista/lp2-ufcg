@@ -1,0 +1,16 @@
+
+public class User {
+
+	double dinheiro;
+	Jogar gamer;
+	
+	public User() {
+		dinheiro = 100;
+		gamer = new Jogar();
+	}
+	
+	public void jogar(){
+		
+	}
+	
+}

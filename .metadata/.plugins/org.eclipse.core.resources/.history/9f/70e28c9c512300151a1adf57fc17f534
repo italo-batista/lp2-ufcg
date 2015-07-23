@@ -1,0 +1,12 @@
+import java.util.Comparator;
+
+public class comparaPorExperciencia implements Comparator<Jogo>{
+
+	@Override
+	public int compare(Jogo o1, Jogo o2) {
+		
+	}
+
+	
+	
+}

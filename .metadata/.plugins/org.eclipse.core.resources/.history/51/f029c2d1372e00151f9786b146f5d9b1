@@ -1,0 +1,19 @@
+
+public class Jogo {
+	
+	private String nome;
+	
+	public Jogar(String nome) {
+		this.nome = nome;
+	}
+	
+	public double jogar(double dinheiro){
+		dinheiro = dinheiro - 5;
+		return dinheiro;
+	}
+	
+	public static void devolve() {
+		
+	}
+	
+}

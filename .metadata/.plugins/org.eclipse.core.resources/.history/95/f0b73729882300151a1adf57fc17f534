@@ -1,0 +1,17 @@
+import java.util.Comparator;
+
+public class comparaPorDesempenho implements Comparator<Jogo>{
+
+	@Override
+	public int compare(Jogo jogoUm, Jogo jogoDois) {
+		if (jogoUm.getMaiorScore() < jogoDois.getMaiorScore()) {
+			return -1;
+		} else if (jogoUm.getMaiorScore() == jogoDois.getMaiorScore()) {
+			return 0;
+		} else {//jogoUm.getMaiorScore() > jogoDois.getMaiorScore()
+			return 1;
+		}
+	}
+	
+
+}
