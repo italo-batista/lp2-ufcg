@@ -1,0 +1,74 @@
+import exceptions.DadoInvalidoException;
+import exceptions.SaldoInsuficienteException;
+
+public interface Jogador {
+
+	/*private String login;
+	
+	public Jogador(String login) {
+		this.login = login;
+	}*/
+
+	public double compraJogo(Jogo jogo, double dinheiro,
+			CatalogoJogos jogosComprados, int x2p);
+/*			throws SaldoInsuficienteException {
+
+		if (dinheiro > jogo.getPreco()) {
+			double desconto = calculaDesconto(jogo.getPreco());
+			double valorCompra = jogo.getPreco() - desconto;
+			dinheiro = dinheiro - valorCompra;
+
+			jogosComprados.adicionaJogo(jogo);
+			calculaX2pCompra(jogo, x2p);
+
+			return dinheiro;
+		} else {
+			throw new SaldoInsuficienteException();
+		}
+	}
+*/
+	public double calculaDesconto(double jogoPreco); /*{
+		return 0;
+	}
+*/
+	public int calculaX2pCompra(Jogo jogo, int x2p); /*{
+		x2p = x2p + (10 * (int) jogo.getPreco());
+		return x2p;
+	}
+*/
+	public int ganhouPartida(String nomeJogo, int scoreObtido, boolean zerou,
+			CatalogoJogos jogosComprados, int x2p) throws DadoInvalidoException; {
+
+		int novoX2p;
+
+		for (Jogo jogo : jogosComprados.getJogos()) {
+
+			if (jogo.getNome().equals(nomeJogo)) {
+				novoX2p = jogo.joga(scoreObtido, zerou);
+				x2p = x2p + novoX2p;
+				return x2p;
+			}
+		}
+		return x2p;
+	}
+*/
+	public int perdeuPartida(String nomeJogo, int scoreObtido, boolean zerou,
+			CatalogoJogos jogosComprados, int x2p); /* {
+
+		int novoX2p;
+		int punicao = 0;
+
+		for (Jogo jogo : jogosComprados.getJogos()) {
+			if (jogo.getNome().equals(nomeJogo)) {
+				novoX2p = jogo.joga(scoreObtido, zerou) - punicao;
+				x2p = x2p + novoX2p;
+			}
+		}
+		return x2p;
+	}
+	
+	public String getLogin(){
+		return this.login;
+	}
+*/
+}

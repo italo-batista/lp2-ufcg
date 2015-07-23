@@ -1,0 +1,34 @@
+package lab05;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class JogoFactoryTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@Test
+	public void testCriaJogoRPG() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCriaJogoLuta() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCriaJogoPlataforma() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testCriaJogo() {
+		fail("Not yet implemented");
+	}
+
+}

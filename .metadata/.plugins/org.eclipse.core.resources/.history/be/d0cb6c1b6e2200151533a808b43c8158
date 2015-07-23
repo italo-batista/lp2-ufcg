@@ -1,0 +1,16 @@
+import java.util.List;
+
+
+public class Façade {
+
+	private Controller controller;
+	
+	public Façade() {
+		controller = new Controller();
+	}
+	
+	public void novoUsuario(String nome, String login, List jogosComprados, double dinheiro, String tipo){
+		controller.novoUsuario(nome, login, jogosComprados, dinheiro, tipo);
+	}
+	
+}

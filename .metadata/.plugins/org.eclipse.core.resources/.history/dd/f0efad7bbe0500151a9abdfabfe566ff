@@ -1,0 +1,12 @@
+package lab05;
+
+import java.util.List;
+
+public class Usuario {
+
+	private String nome;
+	private String login;
+	private List jogosComprados;
+	private double dinheiro;
+	
+}

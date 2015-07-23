@@ -1,0 +1,13 @@
+package lista03_her_comp;
+
+import java.util.List;
+
+public class Carrinho {
+
+	List<Produto> produtos;
+	
+	public Carrinho() {
+		produtos = new ArrayList<Produto>();
+	}
+	
+}

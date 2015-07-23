@@ -1,0 +1,4 @@
+
+public class comparaPorDesempenho implements Comparator<Jogo>{
+
+}

@@ -1,0 +1,14 @@
+package lab05;
+
+public class UpgradeInvalidoException extends Exception {
+
+	
+	private static final long serialVersionUID = 1L;
+
+	public UpgradeInvalidoExceptioN() {
+		super("Usuario ja eh do tipo Veterano.");
+	}
+	
+	public UpgradeInvalidoExceptioN()
+	
+}

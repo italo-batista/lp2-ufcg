@@ -1,0 +1,34 @@
+package sp2fy;
+
+import static org.junit.Assert.*;
+import junit.framework.Assert;
+
+import org.junit.Test;
+
+public class TestAlbum {
+
+	@Test
+	public void testCriaAlbum() {
+		try {
+			Album cantoLivre = new Album("O Canto Livre", "Nara Leao", 1962);
+			Assert.assertEquals("O Canto Livre", cantoLivre.getTitulo());
+			Assert.assertEquals("Nara Leao", cantoLivre.getArtista());
+			Assert.assertEquals(1962, cantoLivre.getAnoLancamento());
+		} catch (Exception e) {
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void addMusica() {
+		try {
+			Album cenaMuda = new Album("A cena Muda", "Maria Bethania", 1974);
+			Musica demoniaca = new Musica("Demoniaca", 3, "MPB");
+			
+			
+			
+			
+		}
+		
+	}
+}

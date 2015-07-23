@@ -1,0 +1,12 @@
+
+public class Mensagem {
+
+	public Mensagem() {
+		
+	}
+		
+	public estadoAtual(String nomeHeroi, int HP) {
+		if (HP > 0) {
+			
+		}
+}

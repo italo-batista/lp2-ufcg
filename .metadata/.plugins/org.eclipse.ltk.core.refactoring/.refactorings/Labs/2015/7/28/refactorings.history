@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TipoUsuarioException.java&apos; to &apos;lab06/src/exceptions&apos;&#x0A;- Original project: &apos;Labs&apos;&#x0A;- Destination element: &apos;lab06/src/exceptions&apos;&#x0A;- Original element: &apos;lab05.TipoUsuarioException.java&apos;" description="Copy compilation unit" destination="=lab06/src&lt;exceptions" element1="/src&lt;lab05{TipoUsuarioException.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1436148483370" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,35 @@
+package lista01_int_a_java;
+
+public class Lutador {
+
+	String nome;
+	int healthPoints;
+	Habilidade habilidade;
+	
+	public Lutador(String nome, int healPoints, Habilidade habilidade) {
+		this.nome = nome;
+		this.healthPoints = healPoints;
+		this.habilidade = habilidade;
+	}
+
+	
+	public void ataca(Lutador outroLutador){
+		String msg = null;
+		
+		if (this.healthPoints > 0) {
+			this.healthPoints = this.healthPoints - this.habilidade.mana;
+		} else {
+			msg = "Nao foi possivel usar "+ this.habilidade.toString() +".";
+		}
+	
+
+
+		   //se tiver mana suficiente faça o seguinte:
+		   //reduza a quantidade de mana utilizada.
+		   //imprima “Atacou <nome outroLutador>.”
+		   //usa a habilidade para imprimir as informações da habilidade.
+		   //faz com que outroLutador receba o dano equivalente 
+		   //    ao dano da habilidade.
+	}
+	
+}

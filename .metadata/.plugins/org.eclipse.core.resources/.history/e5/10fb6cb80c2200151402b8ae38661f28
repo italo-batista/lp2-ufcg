@@ -1,0 +1,33 @@
+import java.util.List;
+
+import exceptions.DadoInvalidoException;
+import exceptions.EntradaException;
+import exceptions.StringInvalidaException;
+import exceptions.TipoUsuarioException;
+
+
+public class Controller {
+
+	private JogoFactory fabricaJogo;
+	private UsuarioFactory fabricaUsuario;
+	
+	public Controller() {
+		fabricaJogo = new JogoFactory();
+		fabricaUsuario = new UsuarioFactory();
+	}
+	
+	public void novoUsuario(String nome, String login, List jogosComprados, double dinheiro, String tipo) throws EntradaException, TipoUsuarioException {
+		
+		try {
+			Usuario novoUsuario = fabricaUsuario.criaUsuario(nome, login, jogosComprados, dinheiro, tipo);
+		} catch (StringInvalidaException e) {
+			System.out.println(e.getMessage());
+		} catch (DadoInvalidoException e) {
+			System.out.println(e.getMessage());
+		} catch (TipoUsuarioException e) {
+			System.out.println(e.getMessage());
+		}
+			
+	}
+	
+}

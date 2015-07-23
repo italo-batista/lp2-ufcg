@@ -1,0 +1,12 @@
+package lab05;
+
+public class scoreNegativoException extends quantiaNegativaException {
+
+	public scoreNegativoException() {
+		super();
+	}
+	
+	public scoreNegativoException(String msg){
+		super(msg);
+	}	
+}

@@ -1,0 +1,13 @@
+package lab05;
+
+public class EntradaException {
+	
+	public EntradaException() {
+		super("Este usuario nao esta cadastrado em loja.");
+	}
+	
+	public EntradaException(String tipo) {
+		super(tipo);
+	}
+
+}

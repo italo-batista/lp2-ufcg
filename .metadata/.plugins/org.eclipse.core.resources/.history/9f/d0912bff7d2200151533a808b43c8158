@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class CatalogoJogos {
+
+	private List<Jogo> catalogo;
+	
+	public CatalogoJogos() {
+		catalogo = new ArrayList(); 
+	}
+	
+	
+	public void adicionaJogo(Jogo jogo){
+		catalogo.add(jogo);
+	}
+	
+	public void removeJogo(Jogo jogo){
+		catalogo.remove(jogo);
+	}
+	
+	public Jogo pesquisaJogo(Jogo jogoPesquisado){
+		for (Jogo jogo : catalogo ) {
+			if (jogoPesquisado.equals(jogo)) {
+				return jogo;
+			}
+		}
+	}
+}

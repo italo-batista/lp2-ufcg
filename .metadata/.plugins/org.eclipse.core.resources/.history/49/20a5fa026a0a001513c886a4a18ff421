@@ -1,0 +1,5 @@
+package ojogo.copy.copy;
+
+public enum Jogabilidade {
+	ONLINE, OFFLINE, MULTIPLAYER, COOPERATIVO, COMPETITIVO
+}

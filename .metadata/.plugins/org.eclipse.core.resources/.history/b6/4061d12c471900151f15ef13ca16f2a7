@@ -1,0 +1,13 @@
+package lista03_her_comp;
+
+public class Banco {
+
+	/*​
+Crie   a   classe   Banco   que   pode   criar,   armazenar   e   fechar   contas.   Além   disso   o   banco   pode  
+fornecer   o   financiamento   e   projeção   de   lucro   de   qualquer   conta,   por   meio   do   nome   do   titular   da  
+conta.   Além   disso,   o   banco   pode   também   calcular   o   total   de   dinheiro   necessário   para   fornecer   o  
+financiamento a todos os seus clientes (cada cliente possui apenas uma conta no banco). 
+	 */
+	
+	
+}

@@ -1,0 +1,45 @@
+package lab05;
+
+import java.util.HashSet;
+
+
+public class RPG extends Jogo {
+	
+	public RPG(String nome, double preco, HashSet<Jogabilidade> jogabilidades){
+		super(nome, preco, jogabilidades);
+	}
+
+	public int joga(int score, boolean zerou) {
+
+		int vezesJogadas = super.getVezesJogadas() + 1;
+		super.setVezesJogadas(vezesJogadas);
+		
+		if (score > super.getMaiorScore()) {
+			super.setMaiorScore(score);
+		}
+		if (zerou) {
+			int vezesZeradas = super.getVezesZeradas() + 1;
+			super.setVezesZeradas(vezesZerada);
+		}
+		
+		return (Integer) null; 
+		
+	}
+	
+	public String toString() {
+
+		StringBuffer sb = new StringBuffer();
+		final String endOfLine = System.getProperty("line.separator");		
+	
+		sb.append(endOfLine);
+		sb.append("+ "+ super.getNome()+" - RPG :");
+		sb.append(endOfLine);
+		sb.append("==> Jogou "+ super.getVezesJogada() +" vez(es)");
+		sb.append(endOfLine);
+		sb.append("==> Zerou "+ super.getVezesZerada() +" vez(es)");
+		sb.append(endOfLine);
+		sb.append("==> Maior score: "+ super.getMaiorScore());
+		sb.append(endOfLine);
+		return sb.toString();
+	}
+}

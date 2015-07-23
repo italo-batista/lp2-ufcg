@@ -1,0 +1,63 @@
+
+public class Heroi {
+
+	public final static int MAX_PONTOS = 100; 
+	
+	private int HP;
+	private String nome;
+	private Mochila mochila;
+	
+	public Heroi (String nome, double pesoMaxMochila) {
+		this.HP = MAX_PONTOS;
+		this.nome = nome;
+		this.mochila = new Mochila(pesoMaxMochila);
+	}
+
+	
+	public int getHP() {
+		return HP;
+	}
+
+	
+	public void setHP(int HP) {
+		this.HP = HP;
+	}
+
+	
+	public String getNome() {
+		return nome;
+	}
+
+	
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	
+	public Mochila getMochila() {
+		return mochila;
+	}
+
+	
+	public void criaItem(String nomeItem, double pesoItem, int efeitoItem, String tipoItem) {
+		Item item = new Item(nomeItem, pesoItem, efeitoItem, tipoItem); 
+	}
+	
+	public void ataca (Heroi outroHeroi) {
+		int danoTotal = mochila.getTotalDano();
+		outroHeroi.recebeDano(danoTotal);
+	}
+	
+	public void recebeDano (int danoTotal) {
+		Mensagem mensagem = new Mensagem();
+		String nomeHeroi = getNome();
+		int vidaHeroi = getHP();
+		
+		this.HP = this.HP - danoTotal;
+		mensagem.estadoAtual(nomeHeroi, vidaHeroi);
+	}
+	
+	
+
+	
+}

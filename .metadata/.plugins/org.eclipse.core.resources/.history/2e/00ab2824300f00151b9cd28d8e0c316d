@@ -1,0 +1,59 @@
+package lab05;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class UsuarioTest {
+
+	Usuario italoM;
+	List<Jogo> jogosComprados;
+	
+	HashSet jogabilidades;
+	Jogo zombieEx;
+	
+	@Before
+	public void setUp() throws Exception {
+		
+		jogabilidades = new HashSet<Jogabilidade>();
+		jogabilidades.add(Jogabilidade.OFFLINE);
+		Jogo zombieEx = new Jogo("Zombie Exterminator", 22.99, jogabilidades);  
+		
+		jogosComprados = new ArrayList<Jogo>();
+		jogosComprados.add(zombieEx);
+		
+		italoM = new Usuario("Italo Medeiros", "italo-medeiros", jogosComprados, 200);
+		
+		Assert.assertEquals("Italo Medeiros", italoM.getNome());
+		Assert.assertEquals(200, italoM.getDinheiro(), 0);
+		Assert.assertEquals("italo-medeiros", italoM.getLogin());
+		Assert.assertEquals(jogosComprados, italoM.getJogosComprados());
+		Assert.assertEquals(0, italoM.getX2p(), 0);		
+	} 
+
+	@Test
+	public void testUsuarioInvalido() throws EntradaException {
+		
+		try {
+			italoM = new Usuario("", null, jogosComprados, -10);
+		} catch (StringInvalidaException e) {
+			Assert.assertEquals("Insira um nome valido.", e.getMessage());
+		} catch (DadoInvalidoException e) {
+			Assert.assertEquals("Dinheiro de usuario nao pode ser negativo.", e.getMessage());
+		}
+		
+		try {
+			
+		}
+		} catch (StringInvalidaException e) {
+			//Assert.assertEquals("Insira um login valido.", e.getMessage());
+		}
+
+}

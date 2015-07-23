@@ -1,0 +1,15 @@
+package lista01_int_a_java;
+
+public class Lutador {
+
+	String nome;
+	int healthPoints;
+	Habilidade habilidade;
+	
+	public Lutador(String nome, int healPoints, Habilidade habilidade) {
+		this.nome = nome;
+		this.healthPoints = healPoints;
+		this.habilidade = habilidade;
+	}
+	
+}

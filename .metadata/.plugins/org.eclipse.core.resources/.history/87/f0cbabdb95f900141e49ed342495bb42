@@ -1,0 +1,58 @@
+
+public class Item {
+
+	private String nome;
+	private int peso;
+	private String tipo;
+	private int efeito;
+	
+	public Item(String nome, int peso, String tipo) {
+		this.nome = nome;
+		this.peso = peso;
+		this.tipo = tipo;
+		this.efeito = efeito;
+	}
+
+	
+	public String getNome() {
+		return nome;
+	}
+	
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	
+	
+	public int getPeso() {
+		return peso;
+	}
+
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+
+	
+	public String getTipo() {
+		return tipo;
+	}
+
+	
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	
+	public int getEfeito() {
+		return efeito;
+	}
+
+	
+	public void setEfeito(int efeito) {
+		this.efeito = efeito;
+	}
+
+	
+	
+}

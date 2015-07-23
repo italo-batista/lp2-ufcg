@@ -1,0 +1,9 @@
+package lab05;
+
+public class jogabilidadeVaziaException extends Exception {
+	
+	public jogabilidadeVaziaException() {
+		super("Insira ao menos um tipo de jogabilidade ao seu jogo.");
+	}
+
+}

@@ -1,0 +1,10 @@
+package lab05;
+
+import java.util.List;
+
+public class Loja {
+	
+	private List usuarios;
+	
+	
+}

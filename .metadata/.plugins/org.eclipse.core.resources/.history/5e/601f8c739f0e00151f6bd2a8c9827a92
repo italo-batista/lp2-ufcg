@@ -1,0 +1,12 @@
+package lab05;
+
+public class TipoObjetoInexistenteException extends LogicaExcpetion {
+
+	public TipoObjetoInexistenteException() {
+		super("Nao existe este tipo para objeto.");
+	}
+	
+	public TipoObjetoInexistenteException(String tipo) {
+		super("Nao existe este tipo de "+ tipo +".");
+	}
+}

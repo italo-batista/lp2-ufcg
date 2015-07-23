@@ -1,0 +1,24 @@
+public class Gerente extends Funcionario {
+	private String nome;
+	public static final double ADICIONAL_TITULO = 250.0;
+	public static final double PERC_IMPOSTO = 0.1;
+
+	public Gerente(String nome, double salarioBruto) {
+		super(nome, salarioBruto);
+		this.nome = nome;
+	}
+
+	public double calculaSalarioLiquido() {
+		double salarioBruto = getSalarioBruto();
+		salarioBruto = salarioBruto - (PERC_IMPOSTO * salarioBruto);
+		return salarioBruto;
+	}
+
+	public String getNome() {
+		return this.nome;
+	}
+
+	public double getSalarioBruto() {
+		return super.getSalarioBruto() + ADICIONAL_TITULO;
+	}
+}
