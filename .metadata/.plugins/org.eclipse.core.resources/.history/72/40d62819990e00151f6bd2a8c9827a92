@@ -1,8 +1,0 @@
-package lab05;
-
-public class stringInvalidaException extends Exception {
-
-	public stringInvalidaException(String tipo) {
-		super("Insira um "+ tipo +" valido.");
-	}
-}

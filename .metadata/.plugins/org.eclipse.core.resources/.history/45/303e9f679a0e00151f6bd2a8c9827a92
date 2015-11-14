@@ -1,9 +1,0 @@
-package lab05;
-
-public class DowngradeInvalidoException {
-
-	public DowngradeInvalidoException() {
-		
-	}
-	
-}

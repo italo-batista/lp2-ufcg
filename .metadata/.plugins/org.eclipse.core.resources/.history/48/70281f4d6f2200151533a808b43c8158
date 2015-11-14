@@ -1,8 +1,0 @@
-package escolaDeIdiomas;
-
-public class CursoInvalidoException extends EntradaInvalidaException{
-
-	public CursoInvalidoException(String curso) {
-		super("HelloWorld nao ensina "+ curso);
-	}
-}

@@ -1,9 +1,0 @@
-package lab05;
-
-public class UpgradeInvalidoException extends Exception {
-
-	public UpgradeInvalidoException() {
-		super("Upgrade invalido: usuario ja eh do tipo Veterano!");
-	}
-	
-}

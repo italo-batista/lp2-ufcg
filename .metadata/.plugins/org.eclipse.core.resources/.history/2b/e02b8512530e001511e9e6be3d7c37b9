@@ -1,9 +1,0 @@
-package lab05;
-
-public class nomeInvalidoException extends Exception {
-
-	public nomeInvalidoException() {
-		super("Insira um nome valido");
-	}
-	
-}

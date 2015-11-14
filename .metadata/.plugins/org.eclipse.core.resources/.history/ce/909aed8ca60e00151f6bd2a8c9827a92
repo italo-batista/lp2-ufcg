@@ -1,9 +1,0 @@
-package lab05;
-
-public class EntradaException extends Expection {
-	
-	public EntradaException() {
-		super("Entrada invalida");
-	}
-	
-}

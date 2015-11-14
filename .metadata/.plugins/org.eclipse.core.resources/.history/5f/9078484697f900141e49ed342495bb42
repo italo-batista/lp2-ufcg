@@ -1,9 +1,0 @@
-package prova01;
-
-public class Pocao {
-
-	public class extends Item(String nome, double peso, int efeito) {
-		
-	}
-	
-}

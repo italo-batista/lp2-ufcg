@@ -1,6 +1,0 @@
-import java.util.Comparator;
-
-public class comparaPorDesempenho implements Comparator<Jogo>{
-	
-
-}

@@ -1,9 +1,0 @@
-package lab05;
-
-public class DowngradeInvalidoException extends Exception {
-
-	public DowngradeInvalidoException(String nome) {
-		super("Downgrade invalido: "+ nome +" ja eh do tipo Noob");
-	}
-	
-}

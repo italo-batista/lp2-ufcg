@@ -16,4 +16,8 @@ public class Jogo {
 		return this.nome;
 	}
 		
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f20449e8f70d91c5f0ba70763ec97e22b50d10dd
