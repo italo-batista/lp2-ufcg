@@ -50,4 +50,7 @@
 <fullyQualifiedTypeName name="CatalogoJogos"/>
 <fullyQualifiedTypeName name="lab05.Jogabilidade"/>
 <fullyQualifiedTypeName name="lab05.Jogo"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.DataOutputStream"/>
 </qualifiedTypeNameHistroy>

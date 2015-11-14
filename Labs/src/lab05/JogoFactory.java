@@ -1,5 +1,7 @@
 package lab05;
 
+
+
 import java.util.HashSet;
 
 public class JogoFactory {
